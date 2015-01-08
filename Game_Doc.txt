@@ -1,0 +1,11 @@
+Update: Jan 8, 2015 10:55PM
+
+Group Name:	PIXELIZED
+Group Members: Francis Banzuela, Michael Jhun Angelo Bea, Junell Marcayda
+Name of Game: BoKCG
+Genre: Casino/Card Game
+Platform: Mobile
+Language: Python
+Tools: Pygame
+Game Purpose and Objectives: Entertainment, Past time
+Details: A card game that uses the standard cards or casino cards which consists of 4 suits with 13 rank of cards each. This is played with 2 to 4 players and each player should only have 1 suit of cards. There are 3 kinds of cards in the game namely Assassin (A), Ranked Soldiers (2-10), and Royalties (J,Q,K). To start the game all players must have all 13 cards in their hands. Every turn all players must put down a card face down within 3 seconds, if a player did not put down a card within that time he/she can't play a card on the next turn. After the timer ends all cards that are put down are flipped for the FACE OFF, an Assassin can be destroyed by Ranked Soldiers, Ranked Soldiers can be destroyed by Royalties, and Royalties can be destroyed by Assassins, Ranked Soldiers can also be destroyed by another Ranked Soldier if it has a higher ranking same as for the royalties where the King is the strongest and Jack is the weakest. If two cards of the same rank are present they are both destroyed. If 3 kinds of cards are present, Assassins attacks first next the Royalties then the Ranked Soldiers. A player is out of the game if he/she have no cards left. If there are 2 players left, and if player A have the highest ranking card and player B have no equal nor higher ranking than player A have then player A is the winner of the game, unless player A's card is a Royalty and player B still have an Assassin.
