@@ -1,0 +1,476 @@
+public final class
+Class
+extends Object
+implements Serializable AnnotatedElement GenericDeclaration Type
+java.lang.Object
+
+   ↳	java.lang.Class<T>
+Class Overview
+________________________________________
+The in-memory representation of a Java class. This representation serves as the starting point for querying class-related information, a process usually called "reflection". There are basically three types of Class instances: those representing real classes and interfaces, those representing primitive types, and those representing array classes.
+Class instances representing object types (classes or interfaces)
+These represent an ordinary class or interface as found in the class hierarchy. The name associated with these Class instances is simply the fully qualified class name of the class or interface that it represents. In addition to this human-readable name, each class is also associated by a so-called descriptor, which is the letter "L", followed by the class name and a semicolon (";"). The descriptor is what the runtime system uses internally for identifying the class (for example in a DEX file).
+Classes representing primitive types
+These represent the standard Java primitive types and hence share their names (for example "int" for the int primitive type). Although it is not possible to create new instances based on these Class instances, they are still useful for providing reflection information, and as the component type of array classes. There is one Classinstance for each primitive type, and their descriptors are:
+•	B representing the byte primitive type
+•	S representing the short primitive type
+•	I representing the int primitive type
+•	J representing the long primitive type
+•	F representing the float primitive type
+•	D representing the double primitive type
+•	C representing the char primitive type
+•	Z representing the boolean primitive type
+•	V representing void function return values
+Classes representing array classes
+These represent the classes of Java arrays. There is one such Class instance per combination of array leaf component type and arity (number of dimensions). In this case, the name associated with the Class consists of one or more left square brackets (one per dimension in the array) followed by the descriptor of the class representing the leaf component type, which can be either an object type or a primitive type. The descriptor of a Class representing an array type is the same as its name. Examples of array class descriptors are:
+•	[I representing the int[] type
+•	[Ljava/lang/String; representing the String[] type
+•	[[[C representing the char[][][] type (three dimensions!)
+Summary
+________________________________________
+Public Methods
+<U> Class<? extends U>
+asSubclass(Class<U> c)
+Casts this Class to represent a subclass of the given class.										
+T	cast(Object obj)
+Casts the given object to the type represented by this Class.										
+boolean	desiredAssertionStatus()
+Returns the assertion status for the class represented by this Class.										
+static Class<?>
+forName(String className, boolean shouldInitialize, ClassLoader classLoader)
+Returns a Class object which represents the class with the given name.										
+static Class<?>
+forName(String className)
+Returns a Class object which represents the class with the given name.										
+<A extends Annotation> A
+getAnnotation(Class<A> annotationType)
+									
+Annotation[]
+getAnnotations()
+Returns an array containing all the annotations of this class.										
+String
+getCanonicalName()
+Returns the canonical name of this class.										
+ClassLoader
+getClassLoader()
+Returns the class loader which was used to load the class represented by this Class.										
+Class[]<?>
+getClasses()
+Returns an array containing Class objects for all public classes, interfaces, enums and annotations that are members of this class and its superclasses.										
+Class<?>
+getComponentType()
+Returns a Class object which represents the component type if this class represents an array type.										
+Constructor<T>
+getConstructor(Class...<?> parameterTypes)
+Returns a Constructor object which represents the public constructor matching the given parameter types.										
+Constructor[]<?>
+getConstructors()
+Returns an array containing Constructor objects for all public constructors for this Class.										
+Annotation[]
+getDeclaredAnnotations()
+Returns the annotations that are directly defined on the class represented by this Class.										
+Class[]<?>
+getDeclaredClasses()
+Returns an array containing Class objects for all classes, interfaces, enums and annotations that are members of this class.										
+Constructor<T>
+getDeclaredConstructor(Class...<?> parameterTypes)
+Returns a Constructor object which represents the constructor matching the specified parameter types that is declared by the class represented by this Class.										
+Constructor[]<?>
+getDeclaredConstructors()
+Returns an array containing Constructor objects for all constructors declared in the class represented by thisClass.										
+Field
+getDeclaredField(String name)
+Returns a Field object for the field with the given name which is declared in the class represented by this Class.										
+Field[]
+getDeclaredFields()
+Returns an array containing Field objects for all fields declared in the class represented by this Class.										
+Method
+getDeclaredMethod(String name, Class...<?> parameterTypes)
+Returns a Method object which represents the method matching the specified name and parameter types that is declared by the class represented by this Class.										
+Method[]
+getDeclaredMethods()
+Returns an array containing Method objects for all methods declared in the class represented by this Class.										
+Class<?>
+getDeclaringClass()
+Returns the class that this class is a member of, or null if this class is a top-level class, a primitive, an array, or defined within a method or constructor.										
+Class<?>
+getEnclosingClass()
+Returns the class enclosing this class.										
+Constructor<?>
+getEnclosingConstructor()
+Returns the enclosing Constructor of this Class, if it is an anonymous or local/automatic class; otherwisenull.										
+Method
+getEnclosingMethod()
+Returns the enclosing Method of this Class, if it is an anonymous or local/automatic class; otherwise null.										
+T[]	getEnumConstants()
+Returns the enum constants associated with this Class.										
+Field
+getField(String name)
+Returns a Field object which represents the public field with the given name.										
+Field[]
+getFields()
+Returns an array containing Field objects for all public fields for the class C represented by this Class.										
+Type[]
+getGenericInterfaces()
+Returns the Types of the interfaces that this Class directly implements.
+									
+Type
+getGenericSuperclass()
+Returns the Type that represents the superclass of this class.										
+Class[]<?>
+getInterfaces()
+Returns an array of Class objects that match the interfaces in the implements declaration of the class represented by this Class.										
+Method
+getMethod(String name, Class...<?> parameterTypes)
+Returns a Method object which represents the public method with the specified name and parameter types.										
+Method[]
+getMethods()
+Returns an array containing Method objects for all public methods for the class C represented by this Class.										
+int	getModifiers()
+Returns an integer that represents the modifiers of the class represented by this Class.										
+String
+getName()
+Returns the name of the class represented by this Class.										
+Package
+getPackage()
+Returns the Package of which the class represented by this Class is a member.										
+ProtectionDomain
+getProtectionDomain()
+Returns null.										
+URL
+getResource(String resourceName)
+Returns the URL of the given resource, or null if the resource is not found.										
+InputStream
+getResourceAsStream(String resourceName)
+Returns a read-only stream for the contents of the given resource, or null if the resource is not found.										
+Object[]
+getSigners()
+Returns null.										
+String
+getSimpleName()
+Returns the simple name of the class represented by this Class as defined in the source code.										
+Class<? super T>
+getSuperclass()
+Returns the Class object which represents the superclass of the class represented by this Class.										
+synchronized TypeVariable[]<Class<T>>
+getTypeParameters()
+Returns an array containing TypeVariable objects for type variables declared by the generic class represented by this Class.										
+boolean	isAnnotation()
+Tests whether this Class represents an annotation class.										
+boolean	isAnnotationPresent(Class<? extends Annotation> annotationType)
+Indicates whether or not this element has an annotation with the specified annotation type (including inherited annotations).										
+boolean	isAnonymousClass()
+Tests whether the class represented by this Class is anonymous.										
+boolean	isArray()
+Tests whether the class represented by this Class is an array class.										
+boolean	isAssignableFrom(Class<?> c)
+Can c be assigned to this class? For example, String can be assigned to Object (by an upcast), however, an Object cannot be assigned to a String as a potentially exception throwing downcast would be necessary.										
+boolean	isEnum()
+Tests whether the class represented by this Class is an enum.										
+boolean	isInstance(Object object)
+Tests whether the given object can be cast to the class represented by this Class.										
+boolean	isInterface()
+Tests whether this Class represents an interface.										
+boolean	isLocalClass()
+Tests whether the class represented by this Class is defined locally.										
+boolean	isMemberClass()
+Tests whether the class represented by this Class is a member class.										
+boolean	isPrimitive()
+Tests whether this Class represents a primitive type.										
+boolean	isSynthetic()
+Tests whether this Class represents a synthetic type.										
+T	newInstance()
+Returns a new instance of the class represented by this Class, created by invoking the default (that is, zero-argument) constructor.										
+String
+toString()
+Returns a string containing a concise, human-readable description of this object.										
+[Expand]
+Inherited Methods
+  From class java.lang.Object
+
+  From interface java.lang.reflect.AnnotatedElement
+
+  From interface java.lang.reflect.GenericDeclaration
+
+Public Methods
+________________________________________
+public Class<? extends U> asSubclass (Class<U> c)
+Added in API level 1
+Casts this Class to represent a subclass of the given class. If successful, this Class is returned; otherwise a ClassCastException is thrown.
+Throws
+ClassCastException
+if this Class cannot be cast to the given type.
+public T cast (Object obj)
+Added in API level 1
+Casts the given object to the type represented by this Class. If the object is null then the result is also null.
+Throws
+ClassCastException
+if the object cannot be cast to the given type.
+public boolean desiredAssertionStatus ()
+Added in API level 1
+Returns the assertion status for the class represented by this Class. Assertion is enabled / disabled based on the class loader, package or class default at runtime.
+public static Class<?> forName (String className, boolean shouldInitialize, ClassLoader classLoader)
+Added in API level 1
+Returns a Class object which represents the class with the given name. The name should be the name of a non-primitive class, as described in the class definition. Primitive types can not be found using this method; use int.class or Integer.TYPE instead.
+If the class has not yet been loaded, it is loaded first, using the given class loader. If the class has not yet been initialized and shouldInitialize is true, the class will be initialized.
+Throws
+ClassNotFoundException
+if the requested class cannot be found.
+LinkageError
+if an error occurs during linkage
+ExceptionInInitializerError
+if an exception occurs during static initialization of a class.
+public static Class<?> forName (String className)
+Added in API level 1
+Returns a Class object which represents the class with the given name. The name should be the name of a non-primitive class, as described in the class definition. Primitive types can not be found using this method; use int.class or Integer.TYPE instead.
+If the class has not yet been loaded, it is loaded and initialized first. This is done through either the class loader of the calling class or one of its parent class loaders. It is possible that a static initializer is run as a result of this call.
+Throws
+ClassNotFoundException
+if the requested class cannot be found.
+LinkageError
+if an error occurs during linkage
+ExceptionInInitializerError
+if an exception occurs during static initialization of a class.
+public A getAnnotation (Class<A> annotationType)
+Added in API level 1
+public Annotation[] getAnnotations ()
+Added in API level 1
+Returns an array containing all the annotations of this class. If there are no annotations then an empty array is returned.
+Returns
+•	an array of all annotations for this element
+See Also
+•	getDeclaredAnnotations()
+public String getCanonicalName ()
+Added in API level 1
+Returns the canonical name of this class. If this class does not have a canonical name as defined in the Java Language Specification, then the method returnsnull.
+public ClassLoader getClassLoader ()
+Added in API level 1
+Returns the class loader which was used to load the class represented by this Class. Implementations are free to return null for classes that were loaded by the bootstrap class loader. The Android reference implementation, though, always returns a reference to an actual class loader.
+public Class[]<?> getClasses ()
+Added in API level 1
+Returns an array containing Class objects for all public classes, interfaces, enums and annotations that are members of this class and its superclasses. This does not include classes of implemented interfaces. If there are no such class members or if this object represents a primitive type then an array of length 0 is returned.
+public Class<?> getComponentType ()
+Added in API level 1
+Returns a Class object which represents the component type if this class represents an array type. Returns null if this class does not represent an array type. The component type of an array type is the type of the elements of the array.
+public Constructor<T> getConstructor (Class...<?> parameterTypes)
+Added in API level 9
+Returns a Constructor object which represents the public constructor matching the given parameter types. (Class[]) null is equivalent to the empty array.
+Throws
+NoSuchMethodException
+if the constructor cannot be found.
+See Also
+•	getDeclaredConstructor(Class[])
+public Constructor[]<?> getConstructors ()
+Added in API level 1
+Returns an array containing Constructor objects for all public constructors for this Class. If there are no public constructors or if this Class represents an array class, a primitive type or void then an empty array is returned.
+See Also
+•	getDeclaredConstructors()
+public Annotation[] getDeclaredAnnotations ()
+Added in API level 1
+Returns the annotations that are directly defined on the class represented by this Class. Annotations that are inherited are not included in the result. If there are no annotations at all, an empty array is returned.
+Returns
+•	an array of annotations declared for this element
+See Also
+•	getAnnotations()
+public Class[]<?> getDeclaredClasses ()
+Added in API level 1
+Returns an array containing Class objects for all classes, interfaces, enums and annotations that are members of this class.
+public Constructor<T> getDeclaredConstructor (Class...<?> parameterTypes)
+Added in API level 9
+Returns a Constructor object which represents the constructor matching the specified parameter types that is declared by the class represented by this Class.(Class[]) null is equivalent to the empty array.
+Throws
+NoSuchMethodException
+if the requested constructor cannot be found.
+See Also
+•	getConstructor(Class[])
+public Constructor[]<?> getDeclaredConstructors ()
+Added in API level 1
+Returns an array containing Constructor objects for all constructors declared in the class represented by this Class. If there are no constructors or if this Classrepresents an array class, a primitive type or void then an empty array is returned.
+See Also
+•	getConstructors()
+public Field getDeclaredField (String name)
+Added in API level 1
+Returns a Field object for the field with the given name which is declared in the class represented by this Class.
+Throws
+NoSuchFieldException
+if the requested field can not be found.
+See Also
+•	getField(String)
+public Field[] getDeclaredFields ()
+Added in API level 1
+Returns an array containing Field objects for all fields declared in the class represented by this Class. If there are no fields or if this Class represents an array class, a primitive type or void then an empty array is returned.
+See Also
+•	getFields()
+public Method getDeclaredMethod (String name, Class...<?> parameterTypes)
+Added in API level 9
+Returns a Method object which represents the method matching the specified name and parameter types that is declared by the class represented by this Class.
+Parameters
+name	the requested method's name.
+parameterTypes	the parameter types of the requested method. (Class[]) null is equivalent to the empty array.
+Returns
+•	the method described by name and parameterTypes.
+Throws
+NoSuchMethodException
+if the requested constructor cannot be found.
+NullPointerException
+if name is null.
+See Also
+•	getMethod(String, Class[])
+public Method[] getDeclaredMethods ()
+Added in API level 1
+Returns an array containing Method objects for all methods declared in the class represented by this Class. If there are no methods or if this Class represents an array class, a primitive type or void then an empty array is returned.
+See Also
+•	getMethods()
+public Class<?> getDeclaringClass ()
+Added in API level 1
+Returns the class that this class is a member of, or null if this class is a top-level class, a primitive, an array, or defined within a method or constructor.
+public Class<?> getEnclosingClass ()
+Added in API level 1
+Returns the class enclosing this class. For most classes this is the same as the declaring class. For classes defined within a method or constructor (typically anonymous inner classes), this is the declaring class of that member.
+public Constructor<?> getEnclosingConstructor ()
+Added in API level 1
+Returns the enclosing Constructor of this Class, if it is an anonymous or local/automatic class; otherwise null.
+public Method getEnclosingMethod ()
+Added in API level 1
+Returns the enclosing Method of this Class, if it is an anonymous or local/automatic class; otherwise null.
+public T[] getEnumConstants ()
+Added in API level 1
+Returns the enum constants associated with this Class. Returns null if this Class does not represent an enum type.
+public Field getField (String name)
+Added in API level 1
+Returns a Field object which represents the public field with the given name. This method first searches the class C represented by this Class, then the interfaces implemented by C and finally the superclasses of C.
+Throws
+NoSuchFieldException
+if the field cannot be found.
+See Also
+•	getDeclaredField(String)
+public Field[] getFields ()
+Added in API level 1
+Returns an array containing Field objects for all public fields for the class C represented by this Class. Fields may be declared in C, the interfaces it implements or in the superclasses of C. The elements in the returned array are in no particular order.
+If there are no public fields or if this class represents an array class, a primitive type or void then an empty array is returned.
+See Also
+•	getDeclaredFields()
+public Type[] getGenericInterfaces ()
+Added in API level 1
+Returns the Types of the interfaces that this Class directly implements. If the Class represents a primitive type or void then an empty array is returned.
+public Type getGenericSuperclass ()
+Added in API level 1
+Returns the Type that represents the superclass of this class.
+public Class[]<?> getInterfaces ()
+Added in API level 1
+Returns an array of Class objects that match the interfaces in the implements declaration of the class represented by this Class. The order of the elements in the array is identical to the order in the original class declaration. If the class does not implement any interfaces, an empty array is returned.
+This method only returns directly-implemented interfaces, and does not include interfaces implemented by superclasses or superinterfaces of any implemented interfaces.
+public Method getMethod (String name, Class...<?> parameterTypes)
+Added in API level 9
+Returns a Method object which represents the public method with the specified name and parameter types. (Class[]) null is equivalent to the empty array. This method first searches the class C represented by this Class, then the superclasses of C and finally the interfaces implemented by C and finally the superclasses of C for a method with matching name.
+Throws
+NoSuchMethodException
+if the method cannot be found.
+See Also
+•	getDeclaredMethod(String, Class[])
+public Method[] getMethods ()
+Added in API level 1
+Returns an array containing Method objects for all public methods for the class C represented by this Class. Methods may be declared in C, the interfaces it implements or in the superclasses of C. The elements in the returned array are in no particular order.
+If there are no public methods or if this Class represents a primitive type or void then an empty array is returned.
+See Also
+•	getDeclaredMethods()
+public int getModifiers ()
+Added in API level 1
+Returns an integer that represents the modifiers of the class represented by this Class. The returned value is a combination of bits defined by constants in theModifier class.
+public String getName ()
+Added in API level 1
+Returns the name of the class represented by this Class. For a description of the format which is used, see the class definition of Class.
+public Package getPackage ()
+Added in API level 1
+Returns the Package of which the class represented by this Class is a member. Returns null if no Package object was created by the class loader of the class.
+public ProtectionDomain getProtectionDomain ()
+Added in API level 1
+Returns null.
+public URL getResource (String resourceName)
+Added in API level 1
+Returns the URL of the given resource, or null if the resource is not found. The mapping between the resource name and the URL is managed by the class' class loader.
+See Also
+•	ClassLoader
+public InputStream getResourceAsStream (String resourceName)
+Added in API level 1
+Returns a read-only stream for the contents of the given resource, or null if the resource is not found. The mapping between the resource name and the stream is managed by the class' class loader.
+See Also
+•	ClassLoader
+public Object[] getSigners ()
+Added in API level 1
+Returns null. (On Android, a ClassLoader can load classes from multiple dex files. All classes from any given dex file will have the same signers, but different dex files may have different signers. This does not fit well with the original ClassLoader-based model of getSigners.)
+public String getSimpleName ()
+Added in API level 1
+Returns the simple name of the class represented by this Class as defined in the source code. If there is no name (that is, the class is anonymous) then an empty string is returned. If the receiver is an array then the name of the underlying type with square braces appended (for example "Integer[]") is returned.
+Returns
+•	the simple name of the class represented by this Class.
+public Class<? super T> getSuperclass ()
+Added in API level 1
+Returns the Class object which represents the superclass of the class represented by this Class. If this Class represents the Object class, a primitive type, an interface or void then the method returns null. If this Class represents an array class then the Object class is returned.
+public synchronized TypeVariable[]<Class<T>> getTypeParameters ()
+Added in API level 1
+Returns an array containing TypeVariable objects for type variables declared by the generic class represented by this Class. Returns an empty array if the class is not generic.
+Returns
+•	the declared type parameters in declaration order
+public boolean isAnnotation ()
+Added in API level 1
+Tests whether this Class represents an annotation class.
+public boolean isAnnotationPresent (Class<? extends Annotation> annotationType)
+Added in API level 1
+Indicates whether or not this element has an annotation with the specified annotation type (including inherited annotations).
+Parameters
+annotationType	the type of the annotation to search for
+Returns
+•	true if the annotation exists, false otherwise
+public boolean isAnonymousClass ()
+Added in API level 1
+Tests whether the class represented by this Class is anonymous.
+public boolean isArray ()
+Added in API level 1
+Tests whether the class represented by this Class is an array class.
+public boolean isAssignableFrom (Class<?> c)
+Added in API level 1
+Can c be assigned to this class? For example, String can be assigned to Object (by an upcast), however, an Object cannot be assigned to a String as a potentially exception throwing downcast would be necessary. Similarly for interfaces, a class that implements (or an interface that extends) another can be assigned to its parent, but not vice-versa. All Classes may assign to themselves. Classes for primitive types may not assign to each other.
+Parameters
+c	the class to check.
+Returns
+•	true if c can be assigned to the class represented by this Class; false otherwise.
+Throws
+NullPointerException
+if c is null.
+public boolean isEnum ()
+Added in API level 1
+Tests whether the class represented by this Class is an enum.
+public boolean isInstance (Object object)
+Added in API level 1
+Tests whether the given object can be cast to the class represented by this Class. This is the runtime version of the instanceof operator.
+Returns
+•	true if object can be cast to the type represented by this Class; false if object is null or cannot be cast.
+public boolean isInterface ()
+Added in API level 1
+Tests whether this Class represents an interface.
+public boolean isLocalClass ()
+Added in API level 1
+Tests whether the class represented by this Class is defined locally.
+public boolean isMemberClass ()
+Added in API level 1
+Tests whether the class represented by this Class is a member class.
+public boolean isPrimitive ()
+Added in API level 1
+Tests whether this Class represents a primitive type.
+public boolean isSynthetic ()
+Added in API level 1
+Tests whether this Class represents a synthetic type.
+public T newInstance ()
+Added in API level 1
+Returns a new instance of the class represented by this Class, created by invoking the default (that is, zero-argument) constructor. If there is no such constructor, or if the creation fails (either because of a lack of available memory or because an exception is thrown by the constructor), an InstantiationException is thrown. If the default constructor exists but is not accessible from the context where this method is invoked, an IllegalAccessException is thrown.
+Throws
+IllegalAccessException
+if the default constructor is not visible.
+InstantiationException
+if the instance cannot be created.
+public String toString ()
+Added in API level 1
+Returns a string containing a concise, human-readable description of this object. Subclasses are encouraged to override this method and provide an implementation that takes into account the object's type and data. The default implementation is equivalent to the following expression:
+   getClass().getName() + '@' + Integer.toHexString(hashCode())
+
