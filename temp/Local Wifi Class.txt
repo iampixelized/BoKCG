@@ -1,0 +1,54 @@
+package
+android.net.wifi
+Provides classes to manage Wi-Fi functionality on the device.
+The Wi-Fi APIs provide a means by which applications can communicate with the lower-level wireless stack that provides Wi-Fi network access. Almost all information from the device supplicant is available, including the connected network's link speed, IP address, negotiation state, and more, plus information about other networks that are available. Some other API features include the ability to scan, add, save, terminate and initiate Wi-Fi connections.
+Some APIs may require the following user permissions:
+•	ACCESS_WIFI_STATE
+•	CHANGE_WIFI_STATE
+•	CHANGE_WIFI_MULTICAST_STATE
+Note: Not all Android-powered devices provide Wi-Fi functionality. If your application uses Wi-Fi, declare so with a <uses-feature> element in the manifest file:
+<manifest ...>
+    <uses-feature android:name="android.hardware.wifi" />
+    ...
+</manifest>
+Classes
+________________________________________
+ScanResult
+Describes information about a detected access point. 
+WifiConfiguration
+A class representing a configured Wi-Fi network, including the security configuration. 
+WifiConfiguration.AuthAlgorithm
+Recognized IEEE 802.11 authentication algorithms. 
+WifiConfiguration.GroupCipher
+Recognized group ciphers. 
+WifiConfiguration.KeyMgmt
+Recognized key management schemes. 
+WifiConfiguration.PairwiseCipher
+Recognized pairwise ciphers for WPA. 
+WifiConfiguration.Protocol
+Recognized security protocols. 
+WifiConfiguration.Status
+Possible status of a network configuration. 
+WifiEnterpriseConfig
+Enterprise configuration details for Wi-Fi. 
+WifiEnterpriseConfig.Eap
+The Extensible Authentication Protocol method used  
+WifiEnterpriseConfig.Phase2
+The inner authentication method used  
+WifiInfo
+Describes the state of any Wifi connection that is active or is in the process of being set up. 
+WifiManager
+This class provides the primary API for managing all aspects of Wi-Fi connectivity. 
+WifiManager.MulticastLock
+Allows an application to receive Wifi Multicast packets. 
+WifiManager.WifiLock
+Allows an application to keep the Wi-Fi radio awake. 
+WifiManager.WpsCallback
+Interface for callback invocation on a start WPS action  
+WpsInfo
+A class representing Wi-Fi Protected Setup  
+Enums
+________________________________________
+SupplicantState
+From defs.h in wpa_supplicant. 
+
