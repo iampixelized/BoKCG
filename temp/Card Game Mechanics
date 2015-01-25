@@ -1,0 +1,34 @@
+Getting Started
+Since this is a card game, the best place to start is with the actual cards. Download the starter project which provides a SpriteKit project preset for an iPad in landscape mode, as well as all the images, fonts and sound files you’ll need to create a functional sample game.
+Take a minute to look around the project to acquaint yourself with its file structure and content. You should see the following project folders:
+System: Contains the basic files to set up a SpriteKit project. This includes AppDelegate.swift, GameViewController.swift, and Main.storyboard
+Scenes: Contains an empty main scene GameScene.swift which will manage the game content.
+Card: Contains an empty Card.swift file which will manage the playing cards.
+Supporting Files: Contains all the images, fonts, and sound files you’ll use in the tutorial.
+This game just wouldn’t be as cool without the art, so I’d like to give special thanks to Vicki from gameartguppy.com for the beautiful card artwork!
+A Classy Start
+Since you can’t play a card game without cards, start by making a class to represent them. Card.swift is currently a blank Swift file, so find it and add:
+import Foundation
+import SpriteKit
+ 
+class Card : SKSpriteNode {
+ 
+  required init(coder aDecoder: NSCoder!) {
+    fatalError("NSCoding not supported")
+  }
+ 
+  init(imageNamed: String) {
+    let cardTexture = SKTexture(imageNamed: imageNamed)
+    super.init(texture: cardTexture, color: nil, size: cardTexture.size())
+  }
+}
+You’re declaring Card as a subclass of SKSpriteNode.
+To create a simple sprite with an image, you would use SKSpriteNode(imageNamed:). In order to keep this behavior, you use the inherited initializer which must call the super classes designated initializer init(texture:color:size:). You do not support NSCoding in this game.
+To put sprites on the screen, open GameScene.swift and add the following code to didMoveToView():
+let wolf = Card(imageNamed: "card_creature_wolf.png")
+wolf.position = CGPointMake(100,200)
+addChild(wolf)
+ 
+let bear = Card(imageNamed: "card_creature_bear.png")
+bear.position = CGPointMake(300, 200)
+addChild(bear)
