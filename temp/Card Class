@@ -1,0 +1,46 @@
+Card Class
+
+The Card class will have the following properties:
+
+-A property to represent the card's suit (Clubs, Spades, Diamonds, or Hearts)
+-A property to represent the card's face value (Ace, King, Queen, Jack, 10, 9, 8, 7, 6, 5, 4, 3, or 2)
+
+The Card class will have the following methods:
+
+-A constructor method that will accept and initialize the card's properties
+
+-A toString method that will create a string representation of the card in the form "Ace of Spades"
+
+public int value;
+public String suit;
+
+int[] deck = new int[52];
+String[] suitA = {"Spades", "Hearts", "Diamonds", "Clubs"};
+int[] valueA = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+
+public Card(int v, String s)
+{
+    value = v;
+    suit = s;
+}
+
+public String toString()
+{       
+     switch (value) 
+     {
+        case 1:   return "Ace";
+        case 2:   return "2";
+        case 3:   return "3";
+        case 4:   return "4";
+        case 5:   return "5";
+        case 6:   return "6";
+        case 7:   return "7";
+        case 8:   return "8";
+        case 9:   return "9";
+        case 10:  return "10";
+        case 11:  return "Jack";
+        case 12:  return "Queen";
+        case 13:  return "King";
+        default:  return null;
+     }
+    }
