@@ -67,9 +67,28 @@
   <fonts name="fonts">
     <font>fonts\font_vadamecum</font>
   </fonts>
+  <objects name="objects">
+    <object>objects\HA</object>
+    <object>objects\H2</object>
+    <object>objects\H3</object>
+    <object>objects\H4</object>
+    <object>objects\H5</object>
+    <object>objects\H6</object>
+    <object>objects\H7</object>
+    <object>objects\H8</object>
+    <object>objects\H9</object>
+    <object>objects\H10</object>
+    <object>objects\HJ</object>
+    <object>objects\HQ</object>
+    <object>objects\HK</object>
+    <object>objects\SpriteView</object>
+  </objects>
   <rooms name="rooms">
-    <room>rooms\player_view</room>
-    <room>rooms\Start_Up</room>
+    <room>rooms\heart</room>
+    <room>rooms\main</room>
+    <room>rooms\diamond</room>
+    <room>rooms\club</room>
+    <room>rooms\spade</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
