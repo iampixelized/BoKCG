@@ -17,6 +17,19 @@
     <sprite>sprites\Clubs_A</sprite>
     <sprite>sprites\Clubs_J</sprite>
     <sprite>sprites\Clubs_K</sprite>
+    <sprite>sprites\hej</sprite>
+    <sprite>sprites\hea</sprite>
+    <sprite>sprites\he9</sprite>
+    <sprite>sprites\he8</sprite>
+    <sprite>sprites\he7</sprite>
+    <sprite>sprites\hek</sprite>
+    <sprite>sprites\he6</sprite>
+    <sprite>sprites\he5</sprite>
+    <sprite>sprites\he4</sprite>
+    <sprite>sprites\he3</sprite>
+    <sprite>sprites\he2</sprite>
+    <sprite>sprites\het</sprite>
+    <sprite>sprites\heq</sprite>
     <sprite>sprites\Clubs_Q</sprite>
     <sprite>sprites\Diamonds_2</sprite>
     <sprite>sprites\Diamonds_3</sprite>
@@ -59,6 +72,7 @@
     <sprite>sprites\Spades_Q</sprite>
     <sprite>sprites\Back</sprite>
     <sprite>sprites\Clubs_2</sprite>
+    <sprite>sprites\blank</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -82,6 +96,7 @@
     <object>objects\HQ</object>
     <object>objects\HK</object>
     <object>objects\SpriteView</object>
+    <object>objects\image</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\heart</room>
