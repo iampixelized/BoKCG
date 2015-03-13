@@ -2,9 +2,9 @@ Update: Mar 13, 2015 9:27PM
 
 Group Name:	PIXELIZED
 
-Group Members:	Francis Banzuela			Arts
-				Michael Jhun Angelo Bea		Project Manager (Paper Works) and Designs
-				Junell Marcayda				Designs and Programming
+Group Members:	Francis Banzuela		Arts
+		Michael Jhun Angelo Bea		Project Manager (Paper Works) and Designs
+		Junell Marcayda			Designs and Programming
 
 Name of Game: BoKCG
 
